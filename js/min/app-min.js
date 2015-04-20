@@ -1,0 +1,1 @@
+var app=angular.module("shengApp",[]);app.directive("addColor",[function(){return{restrict:"A",link:function(n,o,c,i){o.on("click.color",function(){o.find("div").css("color","#000")})}}}]);
