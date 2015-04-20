@@ -1,0 +1,398 @@
+/* ===============================
+	Main Style
+	Author: Sheng
+	最後更新日期：2015 / 02 / 22
+================================*/
+
+#main {
+	padding: 90px 180px;
+	width: 100%;
+	min-width: 1280px;
+	background-color: #333333;
+	#me {
+		text-align: center;
+		.me-pic {
+			display: inline-block;
+			width: 220px;
+			height: 220px;
+			background-size: cover;
+			background-position: center center;
+			border: 6px solid #4BBCD2;
+			background-color: #fff;
+			@include border-radius(50%);
+		}
+		.me-name {
+			position: relative;
+			display: inline-block;
+			margin-top: 70px;
+			width: 100%;
+			line-height: 50px;
+			font-size: 50px;
+			color: #FFFFFF;
+			.me-english {
+				margin-left: 10px;
+				line-height: 22px;
+				font-size: 21px;
+				color: #9B9B9B;
+				@include center(false, true);
+				top: 65%;  // overwrite
+			}
+		}
+		.me-desc {
+			margin-top: 30px;
+			width: 100%;
+			line-height: 25px;
+			font-size: 24px;
+			color: #9B9B9B;
+		}
+	}
+}
+
+.section {
+	width: 100%;
+	.section-header {
+		margin-top: 95px;
+		margin-bottom: 30px;
+		width: 100%;
+		height: 40px;
+		border-bottom: 1px solid #4BBCD2;
+		@include clearfix;
+		.icon {
+			float: left;
+			span {
+				font-size: 26px;
+				color: #4BBCD2;
+			}
+		}
+		.section-name {
+			float: right;
+			line-height: 27px;
+			font-size: 26px;
+			color: #4BBCD2;
+		}
+	}
+
+	.section-footer {
+		margin-top: 95px;
+		margin-bottom: 10px;
+		width: 100%;
+		height: 35px;
+		border-bottom: 1px solid #4BBCD2;
+		@include clearfix;
+		.section-name {
+			float: right;
+			font-size: 13px;
+			color: #FFFFFF;
+		}
+	}
+
+	.section-time {
+		display: block;
+		width: 100%;
+		text-align: right;
+		font-size: 13px;
+		color: #FFFFFF;
+	}
+	
+	// 個人資訊
+	.section-info {
+		.info-list {
+			width: 100%;
+			@include clearfix;
+			.info-item {
+				float: left;
+				margin-bottom: 20px;	
+				width: 50%;
+				line-height: 16px;
+				font-size: 16px;
+				.info-title {
+					color: #FFFFFF;
+				}
+				.info-content {
+					margin-left: 10px;
+					color: #9B9B9B;
+				}
+			}
+		}
+	}
+	
+
+	// 職涯經歷
+	.section-timeline {
+		font-size: 0;  // display: inline-block 的 bug fix
+		.time-header, .time-line, .time-content {
+			vertical-align: top;
+			position: relative;
+			display: inline-block;
+		}
+		.time-header {
+			width: 20%;
+			.company-header {
+				&.one { margin-top: 0; }
+				&.two { margin-top: 95px; }
+				&.three { margin-top: 102px; }
+				&.four { margin-top: 98px; }
+				&.five { margin-top: 182px; }
+				.company-name {
+					max-width: 250px;
+					margin-bottom: 6px;
+					line-height: 18px;
+					font-size: 16px;
+					color: #FFFFFF;
+					@include omitted-words;
+				}
+				.company-time {
+					line-height: 13px;
+					font-size: 12px;
+					color: #9B9B9B;
+				}
+			}
+		}
+		.time-line {
+			width: 20%;
+			.timeline-group {
+				margin-top: 12px;
+				width: 3px;
+				height: 630px;
+				background-color: #CCCCCC;
+				@include center(true, false);
+				.break-point {
+					position: absolute;
+					width: 18px;
+					height: 18px;
+					background: #FFFFFF;
+					border: 2px solid #CCCCCC;
+					@include border-radius(50%);
+					@include center();
+					&.one { top: 0;}
+					&.two { top: 131px;}
+					&.three { top: 270px;}
+					&.four { top: 408px;}
+					&.five { top: 625px;}
+					.circle {
+						width: 8px;
+						height: 8px;
+						@include border-radius(50%);
+						@include center();
+						&.now {
+							background-color: #F5A623;
+						}
+						&.start {
+							background-color: #4a4a4a;
+						}
+					}
+				}
+			}
+		}
+		.time-content {
+			width: 60%;
+			.content-desc {
+				&.one { margin-top: 0; }
+				&.two { margin-top: 35px; }
+				&.three { margin-top: 37px; }
+				&.four { margin-top: 63px; }
+				&.five { margin-top: 95px; }
+				.title {
+					margin-bottom: 10px;
+					line-height: 18px;
+					font-size: 16px;
+					color: #FFFFFF;
+				}
+				.desc {
+					margin-bottom: 5px;
+					line-height: 21px;
+					font-size: 14px;
+					color: #9B9B9B;
+				}
+			}
+		}
+	}
+
+
+
+	// 工作技能
+	.section-skill {
+		.skill-list {
+			.skill-item {
+				font-size: 0;   // display: inline-block 的 bug fix
+				.skill-title {
+					vertical-align: top;
+					display: inline-block;
+					margin-bottom: 30px;
+					width: 30%;
+					line-height: 32px;
+					font-size: 16px;
+					color: #FFFFFF;
+					&:hover {
+						@include transition(color, .3s);
+						color: darken(#FFFFFF, 15%);
+					}
+				}
+				.skill-icon {
+					vertical-align: top;
+					display: inline-block;
+					width: 70%;
+					text-align: center;
+					&.one {
+						span {
+							&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8) {
+								color: #F5A623;
+							}
+						}
+					}
+					&.two {
+						span {
+							&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8) {
+								color: #F5A623;
+							}
+						}
+					}
+					&.three {
+						span {
+							&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8) {
+								color: #F5A623;
+							}
+						}
+					}
+					&.four {
+						span {
+							&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+								color: #F5A623;
+							}
+						}
+					}
+					&.five {
+						span {
+							&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+								color: #F5A623;
+							}
+						}
+					}
+					&.six {
+						span {
+							&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+								color: #F5A623;
+							}
+						}
+					}
+					&.seven {
+						span {
+							&:nth-child(1), &:nth-child(2), &:nth-child(3){
+								color: #F5A623;
+							}
+						}
+					}
+					&.eight {
+						span {
+							&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8) {
+								color: #F5A623;
+							}
+						}
+					}
+					&.nine {
+						span {
+							&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9) {
+								color: #F5A623;
+							}
+						}
+					}
+					&.ten {
+						span {
+							&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+								color: #F5A623;
+							}
+						}
+					}
+					span {
+						margin: 0 19px;
+						font-size: 26px;
+					}
+				}
+			}
+		}	
+	}
+
+	// 目前使用工具
+	.section-tool {
+		.tool-list {
+			.tool-item {
+				display: inline-block;
+				margin-right: 15px;
+				width: auto;
+				.tool-title {
+					display: block;
+					line-height: 16px;
+					font-size: 16px;
+					color: #FFFFFF;
+					&:hover {
+						@include transition(color, .3s);
+						color: darken(#FFFFFF, 15%);
+					}
+				}
+			}
+		}	
+	}
+
+	// 曾經使用過
+	.section-used {
+		.used-list {
+			.used-item {
+				display: inline-block;
+				margin-right: 15px;
+				width: auto;
+				.used-title {
+					display: block;
+					line-height: 16px;
+					font-size: 16px;
+					color: #FFFFFF;
+					&:hover {
+						@include transition(color, .3s);
+						color: darken(#FFFFFF, 15%);
+					}
+				}
+			}
+		}	
+	}
+
+	// 負責專案
+	.section-task {
+		.task-list {
+			.task-item {
+				margin-bottom: 25px;
+				width: 100%;
+				.task-title {
+					display: block;
+					margin-bottom: 10px;
+					line-height: 21px;
+					font-size: 20px;
+					color: #FFFFFF;
+					&:hover {
+						@include transition(color, .3s);
+						color: darken(#FFFFFF, 15%);
+					}
+				}
+				.task-content {
+					display: block;
+					font-size: 14px;
+					color: #9B9B9B;
+					line-height: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

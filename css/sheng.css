@@ -1,0 +1,437 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+html {
+  font-size: 100%;
+  line-height: 1.5em; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+body {
+  background-color: rgba(221, 221, 221, 0.6); }
+
+input:focus, textarea:focus {
+  outline: none; }
+
+a {
+  text-decoration: none; }
+
+/* ===============================
+	Variable Color Palette
+	Author: Sheng
+	最後更新日期：2015 / 02 / 13
+================================*/
+.color-E14A27 {
+  background-color: #E14A27; }
+
+.color-F66F00 {
+  background-color: #F66F00; }
+
+.color-FC7C00 {
+  background-color: #FC7C00; }
+
+.color-15A5FF {
+  background-color: #15A5FF; }
+
+.color-38CFFF {
+  background-color: #38CFFF; }
+
+.color-E86D53 {
+  background-color: #E86D53; }
+
+.color-F7A527 {
+  background-color: #F7A527; }
+
+.color-FBB819 {
+  background-color: #FBB819; }
+
+.color-4BBCD2 {
+  background-color: #4BBCD2; }
+
+.color-86D8FF {
+  background-color: #86D8FF; }
+
+.color-333333 {
+  background-color: #333333; }
+
+.color-6A6A6A {
+  background-color: #6A6A6A; }
+
+.color-9b9b9b {
+  background-color: #9b9b9b; }
+
+.color-FFFFFF {
+  background-color: #FFFFFF; }
+
+/* ===============================
+	Variable Font Style
+	Author: Sheng
+	最後更新日期：2015 / 02 / 13
+================================*/
+/* ===========================
+	Variable Z-index
+	Author: Sheng
+	最後更新日期：2014 / 12 / 09
+============================*/
+/*
+
+1. Centering Mixin
+
+ */
+/*
+
+1. omitted-words
+2. font-size($size)
+3. line-height($size)
+
+ */
+.section .section-timeline .time-header .company-header .company-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+/* ===============================
+	Main Style
+	Author: Sheng
+	最後更新日期：2015 / 02 / 22
+================================*/
+#main {
+  padding: 90px 180px;
+  width: 100%;
+  min-width: 1280px;
+  background-color: #333333; }
+  #main #me {
+    text-align: center; }
+    #main #me .me-pic {
+      display: inline-block;
+      width: 220px;
+      height: 220px;
+      background-size: cover;
+      background-position: center center;
+      border: 6px solid #4BBCD2;
+      background-color: #fff;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%; }
+    #main #me .me-name {
+      position: relative;
+      display: inline-block;
+      margin-top: 70px;
+      width: 100%;
+      line-height: 50px;
+      font-size: 50px;
+      color: #FFFFFF; }
+      #main #me .me-name .me-english {
+        margin-left: 10px;
+        line-height: 22px;
+        font-size: 21px;
+        color: #9B9B9B;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        top: 65%; }
+    #main #me .me-desc {
+      margin-top: 30px;
+      width: 100%;
+      line-height: 25px;
+      font-size: 24px;
+      color: #9B9B9B; }
+
+.section {
+  width: 100%; }
+  .section .section-header {
+    margin-top: 95px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #4BBCD2;
+    overflow: hidden;
+    *zoom: 1; }
+    .section .section-header .icon {
+      float: left; }
+      .section .section-header .icon span {
+        font-size: 26px;
+        color: #4BBCD2; }
+    .section .section-header .section-name {
+      float: right;
+      line-height: 27px;
+      font-size: 26px;
+      color: #4BBCD2; }
+  .section .section-footer {
+    margin-top: 95px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid #4BBCD2;
+    overflow: hidden;
+    *zoom: 1; }
+    .section .section-footer .section-name {
+      float: right;
+      font-size: 13px;
+      color: #FFFFFF; }
+  .section .section-time {
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-size: 13px;
+    color: #FFFFFF; }
+  .section .section-info .info-list {
+    width: 100%;
+    overflow: hidden;
+    *zoom: 1; }
+    .section .section-info .info-list .info-item {
+      float: left;
+      margin-bottom: 20px;
+      width: 50%;
+      line-height: 16px;
+      font-size: 16px; }
+      .section .section-info .info-list .info-item .info-title {
+        color: #FFFFFF; }
+      .section .section-info .info-list .info-item .info-content {
+        margin-left: 10px;
+        color: #9B9B9B; }
+  .section .section-timeline {
+    font-size: 0; }
+    .section .section-timeline .time-header, .section .section-timeline .time-line, .section .section-timeline .time-content {
+      vertical-align: top;
+      position: relative;
+      display: inline-block; }
+    .section .section-timeline .time-header {
+      width: 20%; }
+      .section .section-timeline .time-header .company-header.one {
+        margin-top: 0; }
+      .section .section-timeline .time-header .company-header.two {
+        margin-top: 95px; }
+      .section .section-timeline .time-header .company-header.three {
+        margin-top: 102px; }
+      .section .section-timeline .time-header .company-header.four {
+        margin-top: 98px; }
+      .section .section-timeline .time-header .company-header.five {
+        margin-top: 182px; }
+      .section .section-timeline .time-header .company-header .company-name {
+        max-width: 250px;
+        margin-bottom: 6px;
+        line-height: 18px;
+        font-size: 16px;
+        color: #FFFFFF; }
+      .section .section-timeline .time-header .company-header .company-time {
+        line-height: 13px;
+        font-size: 12px;
+        color: #9B9B9B; }
+    .section .section-timeline .time-line {
+      width: 20%; }
+      .section .section-timeline .time-line .timeline-group {
+        margin-top: 12px;
+        width: 3px;
+        height: 630px;
+        background-color: #CCCCCC;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0); }
+        .section .section-timeline .time-line .timeline-group .break-point {
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          background: #FFFFFF;
+          border: 2px solid #CCCCCC;
+          -moz-border-radius: 50%;
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
+          .section .section-timeline .time-line .timeline-group .break-point.one {
+            top: 0; }
+          .section .section-timeline .time-line .timeline-group .break-point.two {
+            top: 131px; }
+          .section .section-timeline .time-line .timeline-group .break-point.three {
+            top: 270px; }
+          .section .section-timeline .time-line .timeline-group .break-point.four {
+            top: 408px; }
+          .section .section-timeline .time-line .timeline-group .break-point.five {
+            top: 625px; }
+          .section .section-timeline .time-line .timeline-group .break-point .circle {
+            width: 8px;
+            height: 8px;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); }
+            .section .section-timeline .time-line .timeline-group .break-point .circle.now {
+              background-color: #F5A623; }
+            .section .section-timeline .time-line .timeline-group .break-point .circle.start {
+              background-color: #4a4a4a; }
+    .section .section-timeline .time-content {
+      width: 60%; }
+      .section .section-timeline .time-content .content-desc.one {
+        margin-top: 0; }
+      .section .section-timeline .time-content .content-desc.two {
+        margin-top: 35px; }
+      .section .section-timeline .time-content .content-desc.three {
+        margin-top: 37px; }
+      .section .section-timeline .time-content .content-desc.four {
+        margin-top: 63px; }
+      .section .section-timeline .time-content .content-desc.five {
+        margin-top: 95px; }
+      .section .section-timeline .time-content .content-desc .title {
+        margin-bottom: 10px;
+        line-height: 18px;
+        font-size: 16px;
+        color: #FFFFFF; }
+      .section .section-timeline .time-content .content-desc .desc {
+        margin-bottom: 5px;
+        line-height: 21px;
+        font-size: 14px;
+        color: #9B9B9B; }
+  .section .section-skill .skill-list .skill-item {
+    font-size: 0; }
+    .section .section-skill .skill-list .skill-item .skill-title {
+      vertical-align: top;
+      display: inline-block;
+      margin-bottom: 30px;
+      width: 30%;
+      line-height: 32px;
+      font-size: 16px;
+      color: #FFFFFF; }
+      .section .section-skill .skill-list .skill-item .skill-title:hover {
+        -moz-transition: color, 0.3s;
+        -o-transition: color, 0.3s;
+        -webkit-transition: color, 0.3s;
+        transition: color, 0.3s;
+        color: #d9d9d9; }
+    .section .section-skill .skill-list .skill-item .skill-icon {
+      vertical-align: top;
+      display: inline-block;
+      width: 70%;
+      text-align: center; }
+      .section .section-skill .skill-list .skill-item .skill-icon.one span:nth-child(1), .section .section-skill .skill-list .skill-item .skill-icon.one span:nth-child(2), .section .section-skill .skill-list .skill-item .skill-icon.one span:nth-child(3), .section .section-skill .skill-list .skill-item .skill-icon.one span:nth-child(4), .section .section-skill .skill-list .skill-item .skill-icon.one span:nth-child(5), .section .section-skill .skill-list .skill-item .skill-icon.one span:nth-child(6), .section .section-skill .skill-list .skill-item .skill-icon.one span:nth-child(7), .section .section-skill .skill-list .skill-item .skill-icon.one span:nth-child(8) {
+        color: #F5A623; }
+      .section .section-skill .skill-list .skill-item .skill-icon.two span:nth-child(1), .section .section-skill .skill-list .skill-item .skill-icon.two span:nth-child(2), .section .section-skill .skill-list .skill-item .skill-icon.two span:nth-child(3), .section .section-skill .skill-list .skill-item .skill-icon.two span:nth-child(4), .section .section-skill .skill-list .skill-item .skill-icon.two span:nth-child(5), .section .section-skill .skill-list .skill-item .skill-icon.two span:nth-child(6), .section .section-skill .skill-list .skill-item .skill-icon.two span:nth-child(7), .section .section-skill .skill-list .skill-item .skill-icon.two span:nth-child(8) {
+        color: #F5A623; }
+      .section .section-skill .skill-list .skill-item .skill-icon.three span:nth-child(1), .section .section-skill .skill-list .skill-item .skill-icon.three span:nth-child(2), .section .section-skill .skill-list .skill-item .skill-icon.three span:nth-child(3), .section .section-skill .skill-list .skill-item .skill-icon.three span:nth-child(4), .section .section-skill .skill-list .skill-item .skill-icon.three span:nth-child(5), .section .section-skill .skill-list .skill-item .skill-icon.three span:nth-child(6), .section .section-skill .skill-list .skill-item .skill-icon.three span:nth-child(7), .section .section-skill .skill-list .skill-item .skill-icon.three span:nth-child(8) {
+        color: #F5A623; }
+      .section .section-skill .skill-list .skill-item .skill-icon.four span:nth-child(1), .section .section-skill .skill-list .skill-item .skill-icon.four span:nth-child(2), .section .section-skill .skill-list .skill-item .skill-icon.four span:nth-child(3), .section .section-skill .skill-list .skill-item .skill-icon.four span:nth-child(4), .section .section-skill .skill-list .skill-item .skill-icon.four span:nth-child(5), .section .section-skill .skill-list .skill-item .skill-icon.four span:nth-child(6) {
+        color: #F5A623; }
+      .section .section-skill .skill-list .skill-item .skill-icon.five span:nth-child(1), .section .section-skill .skill-list .skill-item .skill-icon.five span:nth-child(2), .section .section-skill .skill-list .skill-item .skill-icon.five span:nth-child(3), .section .section-skill .skill-list .skill-item .skill-icon.five span:nth-child(4), .section .section-skill .skill-list .skill-item .skill-icon.five span:nth-child(5) {
+        color: #F5A623; }
+      .section .section-skill .skill-list .skill-item .skill-icon.six span:nth-child(1), .section .section-skill .skill-list .skill-item .skill-icon.six span:nth-child(2), .section .section-skill .skill-list .skill-item .skill-icon.six span:nth-child(3), .section .section-skill .skill-list .skill-item .skill-icon.six span:nth-child(4), .section .section-skill .skill-list .skill-item .skill-icon.six span:nth-child(5), .section .section-skill .skill-list .skill-item .skill-icon.six span:nth-child(6) {
+        color: #F5A623; }
+      .section .section-skill .skill-list .skill-item .skill-icon.seven span:nth-child(1), .section .section-skill .skill-list .skill-item .skill-icon.seven span:nth-child(2), .section .section-skill .skill-list .skill-item .skill-icon.seven span:nth-child(3) {
+        color: #F5A623; }
+      .section .section-skill .skill-list .skill-item .skill-icon.eight span:nth-child(1), .section .section-skill .skill-list .skill-item .skill-icon.eight span:nth-child(2), .section .section-skill .skill-list .skill-item .skill-icon.eight span:nth-child(3), .section .section-skill .skill-list .skill-item .skill-icon.eight span:nth-child(4), .section .section-skill .skill-list .skill-item .skill-icon.eight span:nth-child(5), .section .section-skill .skill-list .skill-item .skill-icon.eight span:nth-child(6), .section .section-skill .skill-list .skill-item .skill-icon.eight span:nth-child(7), .section .section-skill .skill-list .skill-item .skill-icon.eight span:nth-child(8) {
+        color: #F5A623; }
+      .section .section-skill .skill-list .skill-item .skill-icon.nine span:nth-child(1), .section .section-skill .skill-list .skill-item .skill-icon.nine span:nth-child(2), .section .section-skill .skill-list .skill-item .skill-icon.nine span:nth-child(3), .section .section-skill .skill-list .skill-item .skill-icon.nine span:nth-child(4), .section .section-skill .skill-list .skill-item .skill-icon.nine span:nth-child(5), .section .section-skill .skill-list .skill-item .skill-icon.nine span:nth-child(6), .section .section-skill .skill-list .skill-item .skill-icon.nine span:nth-child(7), .section .section-skill .skill-list .skill-item .skill-icon.nine span:nth-child(8), .section .section-skill .skill-list .skill-item .skill-icon.nine span:nth-child(9) {
+        color: #F5A623; }
+      .section .section-skill .skill-list .skill-item .skill-icon.ten span:nth-child(1), .section .section-skill .skill-list .skill-item .skill-icon.ten span:nth-child(2), .section .section-skill .skill-list .skill-item .skill-icon.ten span:nth-child(3), .section .section-skill .skill-list .skill-item .skill-icon.ten span:nth-child(4), .section .section-skill .skill-list .skill-item .skill-icon.ten span:nth-child(5) {
+        color: #F5A623; }
+      .section .section-skill .skill-list .skill-item .skill-icon span {
+        margin: 0 19px;
+        font-size: 26px; }
+  .section .section-tool .tool-list .tool-item {
+    display: inline-block;
+    margin-right: 15px;
+    width: auto; }
+    .section .section-tool .tool-list .tool-item .tool-title {
+      display: block;
+      line-height: 16px;
+      font-size: 16px;
+      color: #FFFFFF; }
+      .section .section-tool .tool-list .tool-item .tool-title:hover {
+        -moz-transition: color, 0.3s;
+        -o-transition: color, 0.3s;
+        -webkit-transition: color, 0.3s;
+        transition: color, 0.3s;
+        color: #d9d9d9; }
+  .section .section-used .used-list .used-item {
+    display: inline-block;
+    margin-right: 15px;
+    width: auto; }
+    .section .section-used .used-list .used-item .used-title {
+      display: block;
+      line-height: 16px;
+      font-size: 16px;
+      color: #FFFFFF; }
+      .section .section-used .used-list .used-item .used-title:hover {
+        -moz-transition: color, 0.3s;
+        -o-transition: color, 0.3s;
+        -webkit-transition: color, 0.3s;
+        transition: color, 0.3s;
+        color: #d9d9d9; }
+  .section .section-task .task-list .task-item {
+    margin-bottom: 25px;
+    width: 100%; }
+    .section .section-task .task-list .task-item .task-title {
+      display: block;
+      margin-bottom: 10px;
+      line-height: 21px;
+      font-size: 20px;
+      color: #FFFFFF; }
+      .section .section-task .task-list .task-item .task-title:hover {
+        -moz-transition: color, 0.3s;
+        -o-transition: color, 0.3s;
+        -webkit-transition: color, 0.3s;
+        transition: color, 0.3s;
+        color: #d9d9d9; }
+    .section .section-task .task-list .task-item .task-content {
+      display: block;
+      font-size: 14px;
+      color: #9B9B9B;
+      line-height: 14px; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="font/fontcustom/fontcustom.css">
+    <link rel="stylesheet" type="text/css" href="css/sheng.css">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Resume by Shenglian</title>
+
+  </head>
+
+  <body ng-app="shengApp">
+  	<div id="main" class="ng-cloak" ng-controller="mainController">
+
+		<div id="me">
+			<div class="me-pic" style="background-image: url(images/{{me.img}});"></div>
+			<div class="me-name">
+				{{me.cname}}<span class="me-english">{{me.ename}}</span>
+			</div>
+			<div class="me-desc">{{me.desc}}</div>
+		</div>
+
+		<!-- 個人檔案 -->
+		<section class="section">
+			<div class="section-header">
+				<div class="icon"><span class="icon-person"></span></div>
+				<span class="section-name">個人檔案</span>
+			</div>
+
+			<div class="section-info">
+				<div class="info-list">
+					<div class="info-item" ng-repeat="i in me.info">
+						<span class="info-title">{{i.title}}</span>
+						<span class="info-content">{{i.content}}</span>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- 職涯經歷 -->
+		<section class="section">
+			<div class="section-header">
+				<div class="icon"><span class="icon-timeline"></span></div>
+				<span class="section-name">職涯經歷</span>
+			</div>
+			<div class="section-timeline">
+				<div class="time-header">
+					<div class="company-header" ng-repeat="i in me.companytitle"
+						ng-class="{'one': $index == 0, 'two': $index == 1,'three': $index == 2,'four': $index == 3,'five': $index == 4}">
+						<div class="company-name">{{i.title}}</div>
+						<div class="company-time">{{i.time}}</div>
+					</div>
+				</div>
+				<div class="time-line">
+					<div class="timeline-group">
+						<div class="break-point one"><span class="circle now"></span></div>
+						<div class="break-point two"><span class="circle now"></span></div>
+						<div class="break-point three"><span class="circle now"></span></div>
+						<div class="break-point four"><span class="circle now"></span></div>
+						<div class="break-point five"><span class="circle start"></span></div>
+					</div>
+				</div>
+				<div class="time-content">
+					<div class="content-desc" ng-repeat="i in me.companycontent"
+						ng-class="{'one': $index == 0, 'two': $index == 1,'three': $index == 2,'four': $index == 3,'five': $index == 4}">
+						<div class="title">{{i.title}}</div>
+						<div class="desc" ng-repeat="desc in i.desc">{{desc.content}}</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 負責專案 -->
+		<section class="section">
+			<div class="section-header">
+				<div class="icon"><span class="icon-task"></span></div>
+				<span class="section-name">負責專案</span>
+			</div>
+
+			<div class="section-task">
+				<div class="task-list">
+					<div class="task-item" ng-repeat="i in me.task">
+						<a href="{{i.link}}" class="task-title" target="_blank">{{i.title}}</a>
+						<span class="task-content">{{i.content}}</span>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- 工作技能 -->
+		<section class="section">
+			<div class="section-header">
+				<div class="icon"><span class="icon-skill"></span></div>
+				<span class="section-name">工作技能</span>
+			</div>
+			<div class="section-skill">
+				<div class="skill-list">
+					<div class="skill-item" ng-repeat="i in me.skill">
+						<div class="skill-title">{{i.title}}</div>
+						<div class="skill-icon"
+						ng-class="{'one': $index == 0, 'two': $index == 1, 'three': $index == 2, 'four': $index == 3, 'five': $index == 4, 'six': $index == 5, 'seven': $index == 6, 'eight': $index == 7, 'nine': $index == 8, 'ten': $index == 9}">
+							<span class="icon-star"></span>
+							<span class="icon-star"></span>
+							<span class="icon-star"></span>
+							<span class="icon-star"></span>
+							<span class="icon-star"></span>
+							<span class="icon-star"></span>
+							<span class="icon-star"></span>
+							<span class="icon-star"></span>
+							<span class="icon-star"></span>
+							<span class="icon-star"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 目前使用工具 -->
+		<section class="section">
+			<div class="section-header">
+				<div class="icon"><span class="icon-tool"></span></div>
+				<span class="section-name">目前使用工具</span>
+			</div>
+
+			<div class="section-tool">
+				<div class="tool-list">
+					<div class="tool-item" ng-repeat="i in me.tool">
+						<a href class="tool-title">{{i.title}}</a>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- 曾經使用過 -->
+		<section class="section">
+			<div class="section-header">
+				<div class="icon"><span class="icon-used"></span></div>
+				<span class="section-name">曾經使用過</span>
+			</div>
+
+			<div class="section-used">
+				<div class="used-list">
+					<div class="used-item" ng-repeat="i in me.used">
+						<a href class="used-title">{{i.title}}</a>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="section">
+			<div class="section-footer">
+				<span class="section-name">感謝您的耐心觀看，期許有機會一起共事</span>
+			</div>
+			<span class="section-time">最後編輯時間： 2015 / 02 / 22</span>
+		</section>
+
+  	</div>
+
+	
+
+
+	<script src="js/vendors/jquery-1.11.1.min.js"></script>
+	<script src="js/vendors/angularjs/angular.min.js"></script>
+	<script src="js/app.js"></script>
+
+	<!-- controller -->
+	<script src="js/controllers/main.js"></script>
+
+	<!-- service -->
+	<script src="js/services/basedata.js"></script>
+
+  </body>
+   
+</html>
