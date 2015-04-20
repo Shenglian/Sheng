@@ -1,1 +1,0 @@
-app.controller("mainController",["$scope","dataService",function(n,t){var o=function(){t.getMyData().then(function(t){n.me=t})},e=function(){o()};e()}]);
